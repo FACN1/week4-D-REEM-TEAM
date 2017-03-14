@@ -1,0 +1,23 @@
+body, input {
+    font-family: 'Roboto', sans-serif;
+}
+
+header, .auto-complete-form {
+    text-align: center;
+}
+
+header {
+    padding-top: calc(50vh - 50px);
+}
+
+
+.auto-complete-form input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: solid 1px green;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    max-width: 350px;
+    width: 70%;
+}
