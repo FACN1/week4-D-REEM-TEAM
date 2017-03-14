@@ -39,3 +39,11 @@ Module and file plan
 - Result array.length < 7
 - No special characters
 - Request type (string) - vs - Result type (object/array)
+
+
+### log
+- Created index.html and main.css
+- Linked userListener.js file script link
+- Created userListener keyup eventListener to initially console.log() the key pressed
+- Initialised index.js as a main server file and it includes server.js's start function
+- Used `module.exports` to export the start function to the index.js
