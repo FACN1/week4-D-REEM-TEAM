@@ -39,3 +39,9 @@ Module and file plan
 - Result array.length < 7
 - No special characters
 - Request type (string) - vs - Result type (object/array)
+
+
+### log
+- Created index.html and main.css
+- Linked userListener.js file script link
+- Created userListener keyup eventListener to initially console.log() the key pressed
