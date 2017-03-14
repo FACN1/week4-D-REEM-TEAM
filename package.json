@@ -1,0 +1,20 @@
+{
+  "name": "week4-d-reem-team",
+  "version": "1.0.0",
+  "description": "Autocomplete app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/week4-D-REEM-TEAM.git"
+  },
+  "author": "d-reem-team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/week4-D-REEM-TEAM/issues"
+  },
+  "homepage": "https://github.com/FACN1/week4-D-REEM-TEAM#readme"
+}
