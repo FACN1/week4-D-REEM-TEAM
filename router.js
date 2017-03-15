@@ -1,12 +1,13 @@
 var path = require('path');
 var fs = require('fs');
+var searchHandler = require('./routes/searchHandler');
 
 var routes = {
   // "/": indexHandler,
   // "file": fileHandler,
   // "404": notFoundHandler,
   // "500": serverErrorHandler,
-  // "search": searchHandler
+  "search": searchHandler.search
 };
 
 // const header =
@@ -63,4 +64,8 @@ var handler = function(req, res) {
     // res.end();
 }
 
-module.exports = {handler: handler};
+module.exports.headerLookup = headerLookup;
+module.exports = {
+    handler: handler,
+    headerLookup: headerLookup
+};
