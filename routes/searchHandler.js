@@ -4,29 +4,45 @@ var router = require('../router');
 
 
 function searchHandler (req, res) {
-    console.log(searchHandler);
     var url = req.url;
     var queryString = url.split("search?q=")[1];
-    var result = searchAutocomplete(queryString);
-    if (!result) {
-        res.writeHead(500, router.headerLookup["html"]);
-        res.write("Internal Server Error :O");
+    searchAutocomplete(queryString, function (error, responseArray){
+        if (error) {
+            res.writeHead(500, router.headerLookup["html"]);
+            res.write("Internal Server Error :O");
+            res.end();
+            return;
+        }
+        var responseWords = {
+            words: responseArray
+        }
+        res.writeHead(200, router.headerLookup["txt"]);
+        res.write(JSON.stringify(responseWords));
         res.end();
-    }
-
+    })
 }
 
-function searchAutocomplete (searchWord) {
+
+function searchAutocomplete (searchWord, callback) {
     var filePath = path.join(__dirname,"../resources/en.txt");
     fs.readFile(filePath, function (error, file) {
         if (error) {
-            return false;
-            //return?
+            callback(error);
         }
 
         var wordList = file.toString().split("\n");
-        console.log(wordList.length)
-        return true;
+        var counter = 0;
+        var responseArray = wordList.filter(function(word, index) {
+            if (counter < 7 && word.startsWith(searchWord)) {
+                counter += 1;
+                return true;
+            }
+            else {
+                return false;
+            }
+            //  return (index < 7) ? word.startsWith(searchWord);
+        })
+        callback(null, responseArray);
     });
 }
 
