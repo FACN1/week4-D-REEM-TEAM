@@ -47,5 +47,6 @@ function searchAutocomplete (searchWord, callback) {
 }
 
 module.exports = {
-    search: searchHandler
+    search: searchHandler,
+    searchAutocomplete: searchAutocomplete
 }

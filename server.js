@@ -1,7 +1,7 @@
 var http = require('http');
 var router = require('./router')
 
-const port = 3000;
+var port = process.env.PORT || 3000;
 
 var start = function() {
     var server = http.createServer(router.handler);
