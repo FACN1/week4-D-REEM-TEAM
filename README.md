@@ -47,3 +47,6 @@ Module and file plan
 - Created userListener keyup eventListener to initially console.log() the key pressed
 - Initialised index.js as a main server file and it includes server.js's start function
 - Used `module.exports` to export the start function to the index.js
+
+### Cool Links
+https://github.com/first20hours/google-10000-english
