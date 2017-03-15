@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FACN1/week4-D-REEM-TEAM/issues"
   },
-  "homepage": "https://github.com/FACN1/week4-D-REEM-TEAM#readme"
+  "homepage": "https://github.com/FACN1/week4-D-REEM-TEAM#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
 }
