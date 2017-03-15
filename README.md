@@ -1,5 +1,8 @@
 # week4-D-REEM-TEAM
-Autocomplete Project
+
+## Autocomplete Project
+
+![Planning board](https://github.com/FACN1/week4-D-REEM-TEAM/blob/master/Images/DSC_0845.JPG?raw=true)
 
 Module and file plan
 
