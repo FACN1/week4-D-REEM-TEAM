@@ -4,7 +4,7 @@ var searchHandler = require('./routes/searchHandler');
 
 var port = process.env.PORT || 3000;
 
-var wordList = ['empty'];
+var wordList = [];
 
 var start = function() {
     var server = http.createServer(router.handler);

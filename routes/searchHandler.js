@@ -24,7 +24,7 @@ function searchHandler (req, res) {
 
 function searchAutocomplete (searchWord, callback) {
     var filePath = path.join(__dirname,"../resources/en.txt");
-    getWordList(server.wordList.toString() != ['empty'], function (error, wordList) {
+    getWordList(server.wordList.length, function (error, wordList) {
         if (error) {
             callback(error);
             return;
