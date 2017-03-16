@@ -5,9 +5,9 @@ var Render = (function() {
     var render = function(results){
         // var resultsList = document.getElementById('resultsList');
         var form = document.getElementById('autoCompleteForm');
-        if (document.getElementById('resultsList')) {
-            document.getElementById('resultsList').remove();
-        }
+        // if (form.childNodes[1]) {
+        //     form.removeChild(form.childNodes[1]);
+        // }
         var resultsList = document.createElement('ul');
         resultsList.id = 'resultsList';
 
@@ -23,15 +23,15 @@ var Render = (function() {
             suggestionNode.addEventListener('click', function(event){
                 var suggestedWord = event.target.textContent;
                 inputField.value = suggestedWord;
-
-            })
-
+              })
 
             resultsList.appendChild(suggestionNode);
 
         });
-        form.appendChild(resultsList);
+        // form.appendChild(resultsList);
+        form.replaceChild(resultsList, form.lastChild);
     }
+
 
     return {
         render: render
