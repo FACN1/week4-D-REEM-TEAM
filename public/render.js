@@ -3,18 +3,19 @@ var Render = (function() {
     var inputField = document.getElementById('autoCompleteInput');
 
     var render = function(results){
-        var resultsList = document.getElementById('resultsList');
+        // var resultsList = document.getElementById('resultsList');
+        var form = document.getElementById('autoCompleteForm');
+        // if (form.childNodes[1]) {
+        //     form.removeChild(form.childNodes[1]);
+        // }
+        var resultsList = document.createElement('ul');
+        resultsList.id = 'resultsList';
 
-        while (resultsList.hasChildNodes()) {
-            resultsList.removeChild(resultsList.lastChild)
-        }
+        // while (resultsList.hasChildNodes()) {
+        //     resultsList.removeChild(resultsList.lastChild)
+        // }
 
         results.words.forEach(function(word, index, array){
-            var suggestionNode = document.createElement('li');
-            suggestionNode.textContent = word;
-            suggestionNode.className = "suggestion";
-
-          results.words.forEach(function(word){
             var suggestionNode = document.createElement('li');
             suggestionNode.textContent = word;
             suggestionNode.className = "suggestion";
@@ -26,8 +27,11 @@ var Render = (function() {
 
             resultsList.appendChild(suggestionNode);
 
-          });
-        }
+        });
+        // form.appendChild(resultsList);
+        form.replaceChild(resultsList, form.lastChild);
+    }
+
 
     return {
         render: render
