@@ -1,5 +1,17 @@
 # week4-D-REEM-TEAM
 
+### About
+Our Autocomplete project supplies the user with a word list of up to 7 suggestions, as a prediction, based on the user's search input.
+
+##Local Run Instructions
+- clone the repository
+- npm install
+- node index.js
+
+Or
+
+- you can navigate to our website using http://salty-falls-11039.herokuapp.com/
+
 ## Autocomplete Project
 
 ![Planning board](https://github.com/FACN1/week4-D-REEM-TEAM/blob/master/Images/DSC_0845.JPG?raw=true)
