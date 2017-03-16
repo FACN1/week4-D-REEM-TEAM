@@ -3,11 +3,16 @@ var Render = (function() {
     var inputField = document.getElementById('autoCompleteInput');
 
     var render = function(results){
-        var resultsList = document.getElementById('resultsList');
-
-        while (resultsList.hasChildNodes()) {
-            resultsList.removeChild(resultsList.lastChild)
+        // var resultsList = document.getElementById('resultsList');
+        var form = document.getElementById('autoCompleteForm');
+        if (form.childNodes[1]) {
+            form.removeChild(form.childNodes[1]);
         }
+        var resultsList = document.createElement('resultsList');
+
+        // while (resultsList.hasChildNodes()) {
+        //     resultsList.removeChild(resultsList.lastChild)
+        // }
 
         results.words.forEach(function(word, index, array){
             var suggestionNode = document.createElement('li');
@@ -24,6 +29,7 @@ var Render = (function() {
             resultsList.appendChild(suggestionNode);
 
         });
+        form.appendChild(resultsList);
     }
 
     return {
