@@ -5,10 +5,11 @@ var Render = (function() {
     var render = function(results){
         // var resultsList = document.getElementById('resultsList');
         var form = document.getElementById('autoCompleteForm');
-        if (form.childNodes[1]) {
-            form.removeChild(form.childNodes[1]);
+        if (document.getElementById('resultsList')) {
+            document.getElementById('resultsList').remove();
         }
-        var resultsList = document.createElement('resultsList');
+        var resultsList = document.createElement('ul');
+        resultsList.id = 'resultsList';
 
         // while (resultsList.hasChildNodes()) {
         //     resultsList.removeChild(resultsList.lastChild)
