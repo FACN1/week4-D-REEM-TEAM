@@ -8,7 +8,7 @@ var render = function(results){
       resultsList.removeChild(resultsList.lastChild)
     }
 
-    results.words.forEach(function(word, index, array){
+    results.words.forEach(function(word){
       var suggestionNode = document.createElement('li');
       suggestionNode.textContent = word;
       suggestionNode.className = "suggestion";
