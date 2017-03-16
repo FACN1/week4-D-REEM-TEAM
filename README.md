@@ -3,7 +3,7 @@
 ### About
 Our Autocomplete project supplies the user with a word list of up to 7 suggestions, as a prediction, based on the user's search input.
 
-##Local Run Instructions
+## Local Run Instructions
 - clone the repository
 - npm install
 - node index.js
