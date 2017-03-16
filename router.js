@@ -3,12 +3,13 @@ var fs = require('fs');
 var searchHandler = require('./routes/searchHandler');
 var fileHandler = require('./routes/fileHandler');
 var notFoundHandler = require('./routes/notFoundHandler');
+var serverErrorHandler = require('./routes/serverErrorHandler');
 
 var routes = {
   // "/": indexHandler,
   "file": fileHandler.fileLoad,
   "404": notFoundHandler.sendError,
-  // "500": serverErrorHandler,
+  "500": serverErrorHandler.sendError,
   "search": searchHandler.search
 };
 

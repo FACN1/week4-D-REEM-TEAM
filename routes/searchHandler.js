@@ -8,9 +8,7 @@ function searchHandler (req, res) {
     var queryString = url.split("search?q=")[1];
     searchAutocomplete(queryString, function (error, responseArray){
         if (error) {
-            res.writeHead(500, router.headerLookup["html"]);
-            res.write("Internal Server Error :O");
-            res.end();
+            router.routes["500"](req, res);
             return;
         }
         var responseWords = {
@@ -28,6 +26,7 @@ function searchAutocomplete (searchWord, callback) {
     fs.readFile(filePath, function (error, file) {
         if (error) {
             callback(error);
+            return;
         }
 
         var wordList = file.toString().split("\n");
