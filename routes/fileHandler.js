@@ -14,9 +14,7 @@ var fileLoad = function(url, req, res) {
       }
       fs.readFile(filePath, function(error, file){
         if(error) {
-          res.writeHead(500, router.headerLookup["html"]);
-          res.write("<h1> Server error :o </h1>");
-          res.end();
+          router.routes["500"](req, res);
           return;
         }
         res.writeHead(200, router.headerLookup[fileExtension] || router.headerLookup["txt"]);
