@@ -14,6 +14,11 @@ var Render = (function() {
             suggestionNode.textContent = word;
             suggestionNode.className = "suggestion";
 
+          results.words.forEach(function(word){
+            var suggestionNode = document.createElement('li');
+            suggestionNode.textContent = word;
+            suggestionNode.className = "suggestion";
+
             suggestionNode.addEventListener('click', function(event){
                 var suggestedWord = event.target.textContent;
                 inputField.value = suggestedWord;
@@ -22,8 +27,8 @@ var Render = (function() {
             
             resultsList.appendChild(suggestionNode);
 
-        });
-    }
+          });
+        }
 
     return {
         render: render
