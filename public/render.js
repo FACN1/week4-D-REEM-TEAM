@@ -19,8 +19,7 @@ var Render = (function() {
                 inputField.value = suggestedWord;
 
             })
-
-
+            
             resultsList.appendChild(suggestionNode);
 
         });
