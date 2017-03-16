@@ -1,10 +1,17 @@
 var Render = (function() {
     // var testResult = {words: ["x", "xml", "xbox", "xp", "xhtml", "xl", "xanax"]};
     var inputField = document.getElementById('autoCompleteInput');
+    var form = document.getElementById('autoCompleteForm');
+
+    var refresh = function(){
+      var newList = document.createElement('ul');
+      resultsList.id = 'resultsList';
+      form.replaceChild(newList, form.lastChild);
+    }
 
     var render = function(results){
         // var resultsList = document.getElementById('resultsList');
-        var form = document.getElementById('autoCompleteForm');
+
         // if (form.childNodes[1]) {
         //     form.removeChild(form.childNodes[1]);
         // }
@@ -34,6 +41,7 @@ var Render = (function() {
 
 
     return {
-        render: render
+        render: render,
+        refresh: refresh
     }
 })();
